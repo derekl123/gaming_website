@@ -44,34 +44,50 @@ a:hover {
     border-bottom: 1px #444 solid;
 }
 
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle {
+    order: 1;
+}
+.log_in {
+    order: 2;
+}
+.nav_links{
+    text-align: center;
+    order: 3;
+    display: none;
+}
+.nav_links.active {
+    display: block;
+}
 
-
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .toggle {
-        order: 1;
-    }
-    .log_in {
-        order: 2;
-    }
-    .nav_links{
-        text-align: center;
-        order: 3;
-        display: none;
-    }
-    .nav_links.active {
-        display: block;
-    }
 
 
     @media all and (max-width: 575px) {
+        
         .nav_links{
             width: 100%;
         }
+
+        #hamburger_2{
+            display: none;
+        }
+
+        .nav_bar.active #hamburger_1{
+            display: none;
+        }
+
+        .nav_bar.active #hamburger_2{
+            display: initial;
+        }
+
+    .nav_bar.active>ul>li{
+    display: block;
+    }
 
     }
 
@@ -97,6 +113,10 @@ a:hover {
        color: #f3f3f3;
        border: 2px solid #222;
    }
+}
+
+.active{
+    display: block;
 }
 
 /* end of navbar */
@@ -252,7 +272,7 @@ a:hover {
 }
 
 img{
-    max-height: 650px;
+    max-height: 600px;
 
 }
 
@@ -264,7 +284,6 @@ img{
 
 .image_ctn{
     text-align: right;
-    padding: 4rem;
 }
 .main_button1{
     cursor: pointer;
@@ -310,9 +329,13 @@ img{
         min-width: 0;
         flex: 0 0 25%;
     }
+
+    .image_ctn{
+       text-align: center;
+    }
 }
 
-/* info */
+/* info table */
 
 .row{
 display: flex;
@@ -344,6 +367,7 @@ display: flex;
 }
 
 .learnmore{
+    margin-top: 1rem;
     font-size: 14px;
     text-transform: uppercase;
     display: block;
@@ -393,6 +417,7 @@ display: flex;
 }
 
 .box_3{
+    min-height: 200px;
     position: relative;
     background: url("../images/cpu.jpg")no-repeat;
     background-size: cover;
@@ -424,13 +449,13 @@ display: flex;
 }
 
 .center_text{
-    margin-top: 2rem;
     font-size: 2.5rem;
     font-weight: bold;
     color: #f3f3f3;
 }
 
 .box_4{
+    min-height: 200px;
     background:#D3D3D3;
     color: #FFFFF0;
     min-height: 100%;
@@ -440,6 +465,7 @@ display: flex;
 }
 
 .box_5{
+    min-height: 200px;
     position: relative;
     background: url('../images/tech_support.jpeg')no-repeat;
     background-size: cover;
@@ -491,6 +517,10 @@ display: flex;
 
 .box5{
     flex-basis: 100%;
+}
+
+.center_text{
+    font-size: 2rem;
 }
 
 
